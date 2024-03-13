@@ -89,7 +89,7 @@ const Products = () => {
                     </div>
                     <div className="card2">
                        {product.bestseller && (
-                        <span className="badge bg-warning">Bestestseller</span>
+                        <span className="badge bg-warning">Bestseller</span>
                       )}
                       <br />
                       <button

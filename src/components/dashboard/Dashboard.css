@@ -38,7 +38,7 @@
 }
 
 .card1-dash {
-  width: 20rem;
+  width: 18rem;
   padding: 2rem;
   
   border-radius: 0.2rem;
@@ -90,6 +90,7 @@
   
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 4rem;
 }
 
