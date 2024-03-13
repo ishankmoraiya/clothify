@@ -28,7 +28,7 @@ const all_order = [
     p_id: 3,
     c_id: 20,
     o_id: "ENTNT345678",
-    username: "Priya",
+    username: "Khushi Rajput",
     amount: 300,
     status: "Delivered",
     date: "10/12/2023",

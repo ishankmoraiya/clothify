@@ -24,7 +24,7 @@ const Orders = () => {
   return (
     <div className="order_grid">
       <Title title=" - Order"></Title>
-      <SidePanel page="order_list" />
+      {/* <SidePanel page="order_list" /> */}
       <div className="order_row1">
         <span style={{display:"flex",alignItems:"center",flexDirection:"row" ,gap:"0.3rem"}}><IoIosCheckboxOutline/> <h3>Orders</h3> - <span>{all_order.length} Orders Found</span></span>
         

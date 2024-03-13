@@ -22,7 +22,7 @@ export const ViewOrder = () => {
 
   return (
     <div className="order_grid">
-      <SidePanel page="order_list" />
+      {/* <SidePanel page="order_list" /> */}
       <div className="order_row">
         <div>
           <div className="back">
@@ -114,10 +114,4 @@ export const ViewOrder = () => {
   );
 };
 
-// <div class="card" style={{width: "18rem"}}>
-// <img src={product.image} class="card-img-top" alt={product.name}></img>
-// <div class="card-body">
-//   <h5 class="card-title">{product.name}</h5>
-//   <p class="card-text">&#8377;{product.new_price}</p>
-// </div>
-// </div>
+

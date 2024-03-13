@@ -1,23 +1,26 @@
-/* Order.css */
+Order.css
 
 /* Existing styles */
 
 .order_grid {
-  display: grid;
-  grid-template-columns: minmax(auto, 15rem) 1fr; /* Ensure the side panel doesn't shrink too much */
-  gap: 1.2rem;
+  /* display: grid;
+  grid-template-columns: minmax(auto, 15rem) 1fr;
+  gap: 1.2rem; */
   padding-right: 1rem;
 }
 
-.order_row1 {
+ .order_row1 {
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   padding: 0.5rem;
   padding-top: 2.6rem;
-  overflow-x: auto; /* Add horizontal scrollbar if needed */
-}
+  overflow-x: auto; 
+  
+} 
 
+/* 
 .side_pannel {
   padding: 0.5rem;
   padding-top: 5.7rem;
@@ -27,10 +30,11 @@
   gap: 1.8rem;
   background: rgb(238, 243, 243);
   height: 91.7vh;
-  overflow-y: auto; /* Add vertical scrollbar if needed */
-}
+  overflow-y: auto; 
+} */
 
-.side_pannel > a {
+
+/* .side_pannel > a {
   padding: 0.5rem;
   padding-left: 1rem;
   border-top-left-radius: 30px;
@@ -41,27 +45,29 @@
   align-items: center;
   gap: 6px;
   font-size: 1rem;
-}
+} */
 
-.side_pannel > a:hover {
+/* .side_pannel > a:hover {
   background: #feffff;
-}
-
+} */
+/* 
 .side_pannel > .active {
   background: #feffff;
-}
+} */
 
 /* Table CSS */
 
 .table {
   width: 100%;
   table-layout: fixed;
-  min-width: 130vh;
+  min-width: 100%;
   overflow-x: auto;
+  border-collapse: collapse;
+  
 }
 
 .tdody_a {
-  max-height: 66.5vh;
+  max-height: 72.5vh;
   overflow-y: auto;
   display: block;
 }
@@ -82,15 +88,28 @@ tbody tr {
   padding: 12px;
   border: 1px solid #dddddd;
   text-align: center;
-  white-space: nowrap; /* Prevent text wrapping */
-  overflow: hidden; /* Hide overflowing content */
-  text-overflow: ellipsis; /* Add ellipsis for long content */
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
 }
 
+.table th {
+  background-color: #f8f9fa; 
+  color: #212529;
+  font-weight: bold;
+}
+
+.table tbody tr:hover {
+  background-color: #faf5f5; 
+  cursor: pointer;
+}
 /* Responsive styles */
 
 @media screen and (max-width: 768px) {
-  .order_grid {
-    grid-template-columns: 1fr; /* On smaller screens, display only one column */
+  
+  .table {
+    width: 100%; /* Adjust table width for smaller screens */
+    overflow-x: auto;
   }
 }
+

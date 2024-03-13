@@ -119,7 +119,6 @@ const Dashboard = () => {
               fontSize: "24px",
               color: "#333",
               display: "flex",
-              alignItems: "center",
             }}
           >
             <FaTachometerAlt style={{ marginRight: "10px" }} /> Dashboard
@@ -185,7 +184,7 @@ const Dashboard = () => {
                 "Men",
                 "Women",
                 "Kid",
-                "New Collection",
+                "New ",
                 "Orders",
               ]}
             />
@@ -195,9 +194,9 @@ const Dashboard = () => {
             <ChartComponent
               data={dataoforders}
               labels={[
-                "Total Orders Places",
-                "Delivered Order",
-                "Pending Orders",
+                "Total Orders",
+                "Delivered",
+                "Pending",
               ]}
             />
           </div>
