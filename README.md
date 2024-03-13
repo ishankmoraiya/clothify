@@ -12,7 +12,7 @@ You may also see any lint errors in the console.
 
 ### start with Project Layout
 
- --frontend >
+ --frontend > { Front end project }
       - node_modules >
       - public >
              -index.html // landing page
