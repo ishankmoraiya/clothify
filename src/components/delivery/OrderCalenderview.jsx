@@ -12,6 +12,7 @@ const OrderCalenderview = () => {
     };
   return (
     <div className='cal-body'>
+      <h4 style={{textAlign:'center'}}>Orders are arrange by Date</h4>
       <Calendar onDateClick={handleDateClick} />
       {selectedDate && <OrderDetails date={selectedDate} />}
       

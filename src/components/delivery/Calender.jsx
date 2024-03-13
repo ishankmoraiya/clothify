@@ -11,9 +11,10 @@ const Calendar = ({ onDateClick }) => {
   };
 
   return (
-    <div className='cal-body'>
+    <div >
 
     <div className="calendar">
+      
       {daysArray.map((day) => (
         <div key={day} className="calendar-day" onClick={() => handleClick(day)}>
           {day}

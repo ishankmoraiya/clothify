@@ -2,13 +2,13 @@
 .cal-details{
   display: flex;
   flex-direction: column;
-  margin: 5.9rem;
-  
+  justify-content: center;
+  margin: 2rem;
+  animation: fadeIn 0.5s ease-in-out forwards;
 }
 .calendar {
-  margin:3rem;
-  margin-left: 6rem;
-  margin-right: 6rem;
+  margin:2rem;
+  
   padding: 1rem;
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
@@ -17,6 +17,10 @@
   overflow: hidden;
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.cal-body{
+  margin-top: 1rem;
+  
 }
 
 .calendar-day {
@@ -46,4 +50,33 @@
 
 .calendar-day.today {
   font-weight: bold;
+}
+
+.no-orders-found {
+  background-color: #d9dfdd;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInn 0.5s ease-in-out forwards;
+
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+@keyframes fadeInn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
 }

@@ -89,7 +89,7 @@ const Dashboard = () => {
             <img src={im} alt="Profile" className="profile-image" />
             <div className="profile">
               <div>HR@entnt</div>
-              <span style={{ fontSize: "1rem", color: "#68696d" }}>Manger</span>
+              <span style={{ fontSize: "1rem", color: "#68696d" }}>Manager</span>
             </div>
           </h5>
           <Link to="/">
