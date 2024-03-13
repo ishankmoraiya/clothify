@@ -23,9 +23,9 @@
   cursor: pointer;
 }
 
-.container{
+/* .container{
   padding-left: 4rem;
-}
+} */
 
 
 .list_p{
@@ -109,6 +109,8 @@
     width: 100%; /* Adjust width to fit the screen */
     margin-bottom: 1rem;
     margin: auto;
+    border: none;
+    outline: none;
   }
 
   .card-img-top {
