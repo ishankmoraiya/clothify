@@ -1,0 +1,49 @@
+/* Calendar CSS */
+.cal-details{
+  display: flex;
+  flex-direction: column;
+  margin: 5.9rem;
+  
+}
+.calendar {
+  margin:3rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calendar-day:hover {
+  background-color: #f0f0f0;
+}
+
+.calendar-day.active {
+  background-color: #007bff;
+  color: #ffffff;
+  border-color: #007bff;
+}
+
+.calendar-day.inactive {
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+
+.calendar-day.today {
+  font-weight: bold;
+}

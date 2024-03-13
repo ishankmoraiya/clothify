@@ -1,0 +1,79 @@
+/* .card{
+   border-radius: 0rem;
+   border: 0rem;
+   width: 90vh;
+
+}
+.card-body{
+
+}
+.card-img-top {
+    width: 60%;
+    margin: 1rem auto;
+  }
+.card:hover {
+    transform: translateY(0px);
+  } */
+.back{
+    padding: 1rem;
+    
+}
+  .body{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    height: 80vh;
+    
+    border-left: 2px solid wheat;
+    border-right: 2px solid wheat;
+    border-bottom: 2px solid wheat;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  .col2{
+   display: flex;
+   flex-direction: column;
+   gap: 0.1rem;
+  }
+   /* .col2{
+   display: flex;
+   flex-direction: row;
+   gap: 0.1rem;
+  } 
+  .col3{
+    display: flex;
+    flex-direction: row; */
+  .order_row{
+    padding-top: 1rem;
+  }
+  .col2-1-img{
+      /* width: 9%;
+      height: auto;
+      margin: 1px ; */
+      max-width: 100%;
+      max-height: 100px; /* Adjust the value as per your requirements */
+      height: auto;
+      margin: 1px;
+   }
+  .col2-1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-top:1px solid lightgray  ;
+    padding: 0.1rem;
+    padding-top: 1.2rem;
+    gap: 1rem;
+   }
+   
+  .pending{
+    display: flex;
+    flex-direction: column;
+  }
+  .delivered{
+    display: flex;
+    flex-direction: column;
+  }
