@@ -12,11 +12,11 @@ You may also see any lint errors in the console.
 
 ### start with Project Layout
 
- --frontend > { Front end project }
-      - node_modules >
-      - public >
-             -index.html // landing page
-      - src >
+   --frontend > { Front end project }
+          - node_modules >
+          - public >
+                 -index.html // landing page
+          - src >
              - assets >
                      - all_product.js // here is the all mock data of all products listed in website
                      - images....(all_products images).....images
