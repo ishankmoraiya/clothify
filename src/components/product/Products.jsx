@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAlignJustify,faTh, faList, faStar, faCubes } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAlignJustify,
+  faTh,
+  faList,
+  faStar,
+  faCubes,
+} from "@fortawesome/free-solid-svg-icons";
 import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
 import Title from "../../shared/Title";
@@ -83,124 +89,126 @@ const Products = () => {
         <div className="container list_p">
           <div className="productnav">
             <h5>{selectedCategory} Products</h5>
-          
+            
           </div>
-          <div
-          style={{display:"flex",flexDirection:"row" , }}>
-          <button
-              type="button"
-              className="btn "
-              onClick={toggleView}
-              style={{background:"lightgrey",margin:"0.5rem" }}
-            >
-              {isGrid ? <FontAwesomeIcon icon={faList}/>: <FontAwesomeIcon icon={faTh}/>}
-            </button>
-          </div>
+          <div style={{ display: "flex", flexDirection: "row" }}>
+              <button
+                type="button"
+                className="btn "
+                onClick={toggleView}
+                style={{ background: "lightgrey", margin: "0.5rem" }}
+              >
+                {isGrid ? (
+                  <FontAwesomeIcon icon={faList} />
+                ) : (
+                  <FontAwesomeIcon icon={faTh} />
+                )}
+              </button>
+            </div>
           {isGrid ? (
-          <div className="table-container">
-            <table class="table ">
-              <thead className="sticky-header">
-                <tr 
-                >
-                  <th scope="col">S.No</th>
-                  <th scope="col">Product Id</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Amount</th>
-                  <th scope="col">Category</th>
-                  <th scope="col">Bestseller</th>
-                  <th scope="col">Image</th>
-                  <th className="hide-action" scope="col">
-                    Action
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="tdody-a ">
-                {filteredProducts.map((product, key) => (
-                  <tr key={key}
-                  style={{
-                    borderColor: "#bfafaf87",
-                    borderBottomWidth: "1px",
-                    border:"1px solid #bfafaf87"
-                  }}>
-                    <td scope="row">{product.id}</td>
-                    <td>{product.id}</td>
-
-                    <td>{product.name}</td>
-                    <td>₹ {product.new_price}</td>
-                    <td>
-                      {product.category
-                        .split(" ")
-                        .map(capitalizeFirstLetter)
-                        .join(" ")}
-                    </td>
-                    <td>
-                      {product.bestseller && (
-                        <span
-                          className="badge bg-warning"
-                          style={{ margin: "none" }}
-                        >
-                          Bestseller
-                        </span>
-                      )}
-                    </td>
-                    <td>
-                      <img
-                        src={product.image}
-                        alt="Product Image"
-                        style={{
-                          maxWidth: "45px",
-                          maxHeight: "35px",
-                          margin: "-0.5rem",
-                         
-                        }}
-                      />
-                    </td>
-                    <td
-                      className="hide-action"
+            <div className="table-container">
+              <table class="table ">
+                <thead className="sticky-header">
+                  <tr>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Product Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Bestseller</th>
+                    <th scope="col">Image</th>
+                    <th className="hide-action" scope="col">
+                      Action
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="tdody-a ">
+                  {filteredProducts.map((product, key) => (
+                    <tr
+                      key={key}
                       style={{
-                        display: "flex",
-                        justifyContent: "center",
+                        borderColor: "#bfafaf87",
+                        borderBottomWidth: "1px",
+                        border: "1px solid #bfafaf87",
                       }}
                     >
-                      <div
+                      <td scope="row">{product.id}</td>
+                      <td>{product.id}</td>
+
+                      <td>{product.name}</td>
+                      <td>₹ {product.new_price}</td>
+                      <td>
+                        {product.category
+                          .split(" ")
+                          .map(capitalizeFirstLetter)
+                          .join(" ")}
+                      </td>
+                      <td>
+                        {product.bestseller && (
+                          <span
+                            className="badge bg-warning"
+                            style={{ margin: "none" }}
+                          >
+                            Bestseller
+                          </span>
+                        )}
+                      </td>
+                      <td>
+                        <img
+                          src={product.image}
+                          alt="Product Image"
+                          style={{
+                            maxWidth: "45px",
+                            maxHeight: "35px",
+                            margin: "-0.5rem",
+                          }}
+                        />
+                      </td>
+                      <td
                         className="hide-action"
                         style={{
-                          width: "22px",
-                          height: "25px",
-                          borderRadius: "2px",
-                          color: "white",
-                          background: "rgb(0 165 247)",
-                          cursor: "pointer",
-                          marginRight: "10px",
+                          display: "flex",
+                          justifyContent: "center",
                         }}
                       >
-                        {" "}
-                        <MdEdit />
-                      </div>
-                      <div
-                        className="hide-action"
-                        style={{
-                          width: "22px",
-                          height: "25px",
-                          borderRadius: "2px",
-                          color: "white",
-                          background: "#e34848",
-                          cursor: "pointer",
-                          marginRight: "10px",
-                        }}
-                      >
-                        {" "}
-                        <MdDelete />
-                      </div>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+                        <div
+                          className="hide-action"
+                          style={{
+                            width: "22px",
+                            height: "25px",
+                            borderRadius: "2px",
+                            color: "white",
+                            background: "rgb(0 165 247)",
+                            cursor: "pointer",
+                            marginRight: "10px",
+                          }}
+                        >
+                          {" "}
+                          <MdEdit />
+                        </div>
+                        <div
+                          className="hide-action"
+                          style={{
+                            width: "22px",
+                            height: "25px",
+                            borderRadius: "2px",
+                            color: "white",
+                            background: "#e34848",
+                            cursor: "pointer",
+                            marginRight: "10px",
+                          }}
+                        >
+                          {" "}
+                          <MdDelete />
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           ) : (
             <div className="container">
-              
               <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 list_p">
                 {filteredProducts.map((product) => (
                   <div key={product.id} className="col mb-4">

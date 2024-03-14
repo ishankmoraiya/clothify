@@ -47,8 +47,8 @@
 
 .list_p{
   max-height: 92.5vh;
-  padding-top: .8rem;
   overflow-y: auto;
+  margin: 0.8rem;
 
 }
 
