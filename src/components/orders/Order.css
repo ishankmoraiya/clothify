@@ -20,12 +20,36 @@
 
 } */
 
+/* 
 .table {
-  max-height: 72.5vh !important;
-  overflow-y: auto !important;
-  display: block !important;
+  width: 100%;
 
+  max-height: 72.5vh ;
+  overflow-y: auto;
+  display: block ;
+  
+} */
+.table-wrapper {
+  max-height: 72.5vh;
+  overflow-y: auto;
 }
+
+.table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+
+
+.table thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #f8f9fa; /* Adjust as needed */
+}
+
+
 
 
 ::-webkit-scrollbar {

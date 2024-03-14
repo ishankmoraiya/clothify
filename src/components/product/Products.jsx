@@ -99,8 +99,9 @@ const Products = () => {
           {isGrid ? (
           <div className="table-container">
             <table class="table ">
-              <thead>
-                <tr>
+              <thead className="sticky-header">
+                <tr 
+                >
                   <th scope="col">S.No</th>
                   <th scope="col">Product Id</th>
                   <th scope="col">Name</th>
@@ -115,7 +116,12 @@ const Products = () => {
               </thead>
               <tbody className="tdody-a ">
                 {filteredProducts.map((product, key) => (
-                  <tr key={key}>
+                  <tr key={key}
+                  style={{
+                    borderColor: "#bfafaf87",
+                    borderBottomWidth: "1px",
+                    border:"1px solid #bfafaf87"
+                  }}>
                     <td scope="row">{product.id}</td>
                     <td>{product.id}</td>
 

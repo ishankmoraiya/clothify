@@ -34,8 +34,8 @@ const Orders = () => {
           <h5>All Orders</h5>
         </span>
       </div>
-      <div className="table-responsive ">
-        <table className="table">
+      <div className="table-responsive table-wrapper">
+        <table className="table" style={{ width: '100%' }}>
           <thead>
             <tr>
               <th scope="col">S.No</th>
@@ -57,6 +57,7 @@ const Orders = () => {
                 style={{
                   borderColor: "#bfafaf87",
                   borderBottomWidth: "1px",
+                  border:"1px solid #bfafaf87"
                 }}
               >
                 <th> {list.s_no}</th>
