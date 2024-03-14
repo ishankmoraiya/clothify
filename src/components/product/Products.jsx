@@ -147,7 +147,7 @@ const Products = () => {
                         height: "25px",
                         borderRadius: "2px",
                         color: "white",
-                        background: "#5f5fe8",
+                        background: "rgb(0 165 247)",
                         cursor: "pointer",
                         marginRight: "10px",
                       }}

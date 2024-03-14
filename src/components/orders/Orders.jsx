@@ -52,7 +52,7 @@ const Orders = () => {
           <tbody className="tdody_a">
             {all_order.map((list, key) => (
               <Link to={`/vieworder/${list.p_id}`}>
-                <tr key={key}>
+                <tr key={key} style={{   borderColor:"#bfafaf87" , borderBottomWidth:"1px"}}>
                   <td scope="row">{list.s_no}</td>
                   <td>{list.c_id}</td>
                   <td>{list.o_id}</td>
@@ -77,7 +77,8 @@ const Orders = () => {
                         style={{
                           background:
                             " linear-gradient(rgb(255 198 34), rgb(249, 255, 255))",
-                          borderRadius: "2rem",
+                          borderRadius: "1rem",
+                          
                         }}
                       >
                         {" "}

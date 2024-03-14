@@ -22,7 +22,9 @@
   font-weight: bold;
   cursor: pointer;
 }
-
+.table>:not(:first-child) {
+ border-top: 0px solid currentColor;
+}
 /* .container{
   padding-left: 4rem;
 } */
@@ -129,11 +131,13 @@
 @media screen and (max-width: 575px) {
   .body1{
     grid-template-columns: 1fr;
+    margin: 0rem;
   }
   .body1 > .container1{
     display: none;
   }
   .body1 > .container{
+    padding: 0.1rem;
     padding-top: 1rem;
   }
   .card {

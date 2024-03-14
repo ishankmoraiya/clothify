@@ -12,6 +12,8 @@ import { FaTachometerAlt } from "react-icons/fa";
 import { AiOutlineStock } from "react-icons/ai";
 import { CiBookmark } from "react-icons/ci";
 import { FaUserFriends } from "react-icons/fa";
+import { GiClothes } from "react-icons/gi";
+
 import im from "./male.png";
 import ChartComponent from "./ChartComponent";
 import all_product from "../../assets/all_product";
@@ -28,7 +30,7 @@ const Dashboard = () => {
 
   const [deliveredOrders, setDeliveredOrders] = useState(0);
   const [pendingOrders, setPendingOrders] = useState(0);
-
+  let returnorder=10;
   useEffect(() => {
     let deliveredCount = 0;
     let pendingCount = 0;
@@ -45,7 +47,9 @@ const Dashboard = () => {
     setPendingOrders(pendingCount);
   }, [all_order]);
 
-  const dataoforders = [all_order.length, deliveredOrders, pendingOrders];
+  const dataoforders = [all_order.length, deliveredOrders, pendingOrders,returnorder];
+  const sales=["₹ 45,000","₹ 30,000","₹ 44,400" ,"₹ 24,400","₹ 84,400","₹ 4,500"] ;
+  const parsedSales = sales.map(sale => parseFloat(sale.replace("₹", "").replace(",", "")));
 
   useEffect(() => {
     const menProducts = all_product.filter(
@@ -104,9 +108,9 @@ const Dashboard = () => {
             <FaShoppingCart />
             <span className="icon-text-gap">All Products</span>
           </Link>
-          <Link>
+          <Link to="/OrderCalenderview">
             <FaBalanceScaleLeft />
-            <span className="icon-text-gap">Stocks</span>
+            <span className="icon-text-gap">Calender</span>
           </Link>
           <Link>
             <FaDatabase />
@@ -124,14 +128,15 @@ const Dashboard = () => {
             <FaTachometerAlt style={{ marginRight: "10px" }} /> Dashboard
           </h3>
           <div className="top row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3">
-            <div
+            <a
+               href="#sales-chart"
               className="card1-dash "
               style={{
                 background: " linear-gradient(#c935dc, rgb(249, 255, 255))",
               }}
             >
               <h5>
-                Weekly Sales <AiOutlineStock />
+                Mothly Sales <AiOutlineStock />
               </h5>
               <h4>
                 <strong>₹ 4,500</strong>
@@ -139,7 +144,7 @@ const Dashboard = () => {
               </h4>
               <br />
               <p>Increased by 30%</p>
-            </div>
+            </a>
             <a
               href="#total-order-chart"
               className="card1-dash card2-dash"
@@ -158,7 +163,8 @@ const Dashboard = () => {
               <br />
               <p>Increased by 10%</p>
             </a>
-            <div
+            <a
+             href="#inventory"
               className="card1-dash card3-dash"
               style={{
                 background:
@@ -166,16 +172,44 @@ const Dashboard = () => {
               }}
             >
               <h5>
-                Visitors <FaUserFriends />
+                Inventory <GiClothes />
               </h5>
               <h4>
-                <strong>^ 50,300</strong>
+                <strong>^ {all_product.length}</strong>
               </h4>
               <br />
               <p>Increased by 40%</p>
-            </div>
+            </a>
           </div>
-          <div className="chart">
+          <div id="sales-chart">
+            <h3>Sales Analysis</h3>
+            <ChartComponent
+              data={parsedSales}
+              labels={[
+                "October",
+                "November",
+                "December",
+                "January",
+                "Febuary",
+                "March",
+              ]}
+            />
+          </div>
+          
+          <div id="total-order-chart">
+            <h3>Order Analysis</h3>
+            <ChartComponent
+              data={dataoforders}
+              labels={[
+                "Total Orders",
+                "Delivered",
+                "Pending",
+                "Return"
+              ]}
+            />
+          </div>
+
+          <div id="inventory" className="chart">
             <h3>Stocks Analysis</h3>
             <ChartComponent
               data={data}
@@ -189,17 +223,7 @@ const Dashboard = () => {
               ]}
             />
           </div>
-          <div id="total-order-chart">
-            <h3>Order Analysis</h3>
-            <ChartComponent
-              data={dataoforders}
-              labels={[
-                "Total Orders",
-                "Delivered",
-                "Pending",
-              ]}
-            />
-          </div>
+         
         </div>
       </div>
     </div>

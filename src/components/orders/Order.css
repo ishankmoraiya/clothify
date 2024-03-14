@@ -1,11 +1,9 @@
 /* Order.css */
 
-.order_grid {
-  padding-right: 1rem !important;
-}
+
 
 .order_row1 {
-  margin: 1rem !important;
+  margin: 1rem ;
   display: flex !important;
   flex-direction: column !important;
   gap: 0.5rem !important;
@@ -26,6 +24,7 @@
   max-height: 72.5vh !important;
   overflow-y: auto !important;
   display: block !important;
+  
 }
 
 ::-webkit-scrollbar {
@@ -73,6 +72,10 @@ tbody tr {
   .table {
     width: 100% !important;
     overflow-x: auto !important;
+  }
+  .order_row1{
+    margin: 0rem;
+    padding: 0.1rem;
   }
 }
 
