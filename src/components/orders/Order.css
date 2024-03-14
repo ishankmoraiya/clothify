@@ -1,115 +1,88 @@
-Order.css
-
-/* Existing styles */
+/* Order.css */
 
 .order_grid {
-  /* display: grid;
-  grid-template-columns: minmax(auto, 15rem) 1fr;
-  gap: 1.2rem; */
-  padding-right: 1rem;
+  padding-right: 1rem !important;
 }
 
- .order_row1 {
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 0.5rem;
-  padding-top: 2.6rem;
-  overflow-x: auto; 
-  
-} 
-
-/* 
-.side_pannel {
-  padding: 0.5rem;
-  padding-top: 5.7rem;
-  padding-right: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
-  background: rgb(238, 243, 243);
-  height: 91.7vh;
-  overflow-y: auto; 
-} */
-
-
-/* .side_pannel > a {
-  padding: 0.5rem;
-  padding-left: 1rem;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-  text-decoration: none;
-  color: #0a0707;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 1rem;
-} */
-
-/* .side_pannel > a:hover {
-  background: #feffff;
-} */
-/* 
-.side_pannel > .active {
-  background: #feffff;
-} */
-
-/* Table CSS */
+.order_row1 {
+  margin: 1rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.5rem !important;
+  padding: 0.5rem !important;
+  padding-top: 2.6rem !important;
+  overflow-x: auto !important;
+}
 
 .table {
-  width: 100%;
-  table-layout: fixed;
-  min-width: 100%;
-  overflow-x: auto;
-  border-collapse: collapse;
-  
+  width: 100% !important;
+  table-layout: fixed !important;
+  min-width: 100% !important;
+  overflow-x: auto !important;
+  border-collapse: collapse !important;
 }
 
 .tdody_a {
-  max-height: 72.5vh;
-  overflow-y: auto;
-  display: block;
+  max-height: 72.5vh !important;
+  overflow-y: auto !important;
+  display: block !important;
 }
 
-::-webkit-scrollbar{
-  width: 0;
+::-webkit-scrollbar {
+  width: 0 !important;
 }
 
 .table > thead,
 tbody tr {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
+  display: table !important;
+  width: 100% !important;
+  table-layout: fixed !important;
 }
 
 .table th,
 .table td {
-  padding: 12px;
-  border: 1px solid #dddddd;
-  text-align: center;
-  white-space: nowrap; 
-  overflow: hidden;
-  text-overflow: ellipsis; 
+  padding: 12px !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.table > .tbody_a tr:nth-child(even) {
+  background-color: #f2f2f2 !important; /* Background color for even rows */
+}
+
+.table > .tbody_a tr:nth-child(odd) {
+  background-color: #ffffff !important; /* Background color for odd rows */
 }
 
 .table th {
-  background-color: #f8f9fa; 
-  color: #212529;
-  font-weight: bold;
+  background-color: #f8f9fa !important;
+  color: #212529 !important;
+  font-weight: bold !important;
 }
 
 .table tbody tr:hover {
-  background-color: #faf5f5; 
-  cursor: pointer;
+  background-color: #faf5f5 !important;
+  cursor: pointer !important;
 }
+
 /* Responsive styles */
 
 @media screen and (max-width: 768px) {
-  
   .table {
-    width: 100%; /* Adjust table width for smaller screens */
-    overflow-x: auto;
+    width: 100% !important;
+    overflow-x: auto !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  th:nth-child(2),
+  td:nth-child(2),
+
+  th:nth-child(5),
+  td:nth-child(5) {
+    display: none;
   }
 }
 

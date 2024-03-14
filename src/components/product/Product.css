@@ -9,7 +9,7 @@
   flex-direction: column;
   gap: 1rem;
   padding: 0.8rem;
-  padding-top: 3.6rem;
+  padding-top: 1.3rem;
   padding-left: 1rem;
 
 }
@@ -27,9 +27,23 @@
   padding-left: 4rem;
 } */
 
+.search {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.search:focus {
+  border-color: dodgerblue;
+  box-shadow: 0 0 5px dodgerblue;
+}
 
 .list_p{
-  max-height: 74.5vh;
+  max-height: 92.5vh;
   padding-top: .8rem;
   overflow-y: auto;
 }
@@ -38,7 +52,13 @@
   width: 0;
 }
 
-
+.container{
+  display: flex;
+  flex-direction: column;
+  
+  padding: 1rem;
+  padding-top: 4.5rem;
+}
 
 .card {
   /* margin-left: 60px;
@@ -80,6 +100,11 @@
   color: inherit;
 }
 
+/*table css*/
+/* ProductTable.css */
+/* ProductTable.css */
+
+
 @media screen and (max-width: 575px) {
   .body1 {
     grid-template-columns: 1fr;
@@ -88,12 +113,15 @@
     display: none;
   }
   .card {
-    width: 100%; /* Adjust width to fit the screen */
-    margin-bottom: 1rem; /* Add space between cards */
+    width: 100%; 
+    margin-bottom: 1rem; 
   }
   .card-img-top {
-    width: 100%; /* Make image fill the width */
-    height: auto; /* Maintain aspect ratio */
+     height: auto; 
+  }
+   
+  .badge.bg-warning {
+    font-size: 0.8rem;
   }
 }
 
@@ -105,6 +133,9 @@
   .body1 > .container1{
     display: none;
   }
+  .body1 > .container{
+    padding-top: 1rem;
+  }
   .card {
     width: 100%; 
     margin-bottom: 1rem;
@@ -112,10 +143,19 @@
     border: none;
     outline: none;
   }
-
+ 
   .card-img-top {
     width: 100px;
     height: 50%;
     margin: auto;
+  }
+  th:nth-child(6),
+  td:nth-child(6) {
+    display: none;
+  }
+}
+@media screen and (min-width: 565px){
+  .body1 >.container>.productnav{
+    display: none;
   }
 }
