@@ -34,20 +34,20 @@
   overflow-y: auto;
 }
 
-.table {
+/* .table {
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
-}
+} */
 
 
 
-.table thead {
+ .table thead {
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: #f8f9fa; /* Adjust as needed */
-}
+  background-color: #f8f9fa; 
+} 
 
 
 
