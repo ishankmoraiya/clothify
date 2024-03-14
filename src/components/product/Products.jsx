@@ -1,22 +1,21 @@
 import React, { useState } from "react";
-import Title from "../../shared/Title";
-import all_product from "../../assets/all_product";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAlignJustify, faStar } from "@fortawesome/free-solid-svg-icons";
-import "./Product.css";
-import { faCubes } from "@fortawesome/free-solid-svg-icons";
-
+import { faAlignJustify,faTh, faList, faStar, faCubes } from "@fortawesome/free-solid-svg-icons";
 import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
+import Title from "../../shared/Title";
+import all_product from "../../assets/all_product";
+import "./Product.css";
 
 const generateRandomLeftover = () => {
-  return Math.floor(Math.random() * 11);
+  return Math.floor(Math.random() * 1000);
 };
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [filteredProducts, setFilteredProducts] = useState(all_product);
   const [searchQuery, setSearchQuery] = useState(""); // New state to hold search query
+  const [isGrid, setIsGrid] = useState("true");
 
   const handleCategoryChange = (category) => {
     console.log("Selected Category:", category);
@@ -53,6 +52,9 @@ const Products = () => {
     );
     setFilteredProducts(filtered);
   };
+  const toggleView = () => {
+    setIsGrid(!isGrid);
+  };
 
   return (
     <div>
@@ -80,101 +82,163 @@ const Products = () => {
         </div>
         <div className="container list_p">
           <div className="productnav">
-            <h4>{selectedCategory}</h4>
-            <h6>{filteredProducts.length} Products</h6>
+            <h5>{selectedCategory} Products</h5>
+          
           </div>
-          <table class="table " >
-            <thead>
-              <tr>
-                <th scope="col">S.No</th>
-                <th scope="col">Product Id</th>
-                <th scope="col">Name</th>
-                <th scope="col">Amount</th>
-                <th scope="col">Category</th>
-                <th scope="col">Bestseller</th>
-                <th scope="col">Image</th>
-                <th className="hide-action" scope="col">
-                  Action
-                </th>
-              </tr>
-            </thead>
-            <tbody className="tdody-a ">
-              {filteredProducts.map((product, key) => (
-                <tr key={key}>
-                  <td scope="row">{product.id}</td>
-                  <td>{product.id}</td>
-
-                  <td>{product.name}</td>
-                  <td>₹ {product.new_price}</td>
-                  <td>
-                    {product.category
-                      .split(" ")
-                      .map(capitalizeFirstLetter)
-                      .join(" ")}
-                  </td>
-                  <td>
-                    {product.bestseller && (
-                      <span
-                        className="badge bg-warning"
-                        style={{ margin: "none" }}
-                      >
-                        Bestseller
-                      </span>
-                    )}
-                  </td>
-                  <td>
-                    <img
-                      src={product.image}
-                      alt="Product Image"
-                      style={{
-                        maxWidth: "50px",
-                        maxHeight: "40px",
-                        margin: "-0.5rem",
-                      }}
-                    />
-                  </td>
-                  <td
-                    className="hide-action"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <div
-                      className="hide-action"
-                      style={{
-                        width: "22px",
-                        height: "25px",
-                        borderRadius: "2px",
-                        color: "white",
-                        background: "rgb(0 165 247)",
-                        cursor: "pointer",
-                        marginRight: "10px",
-                      }}
-                    >
-                      {" "}
-                      <MdEdit />
-                    </div>
-                    <div
-                      className="hide-action"
-                      style={{
-                        width: "22px",
-                        height: "25px",
-                        borderRadius: "2px",
-                        color: "white",
-                        background: "#e34848",
-                        cursor: "pointer",
-                        marginRight: "10px",
-                      }}
-                    >
-                      {" "}
-                      <MdDelete />
-                    </div>
-                  </td>
+          <div
+          style={{display:"flex",flexDirection:"row" , }}>
+          <button
+              type="button"
+              className="btn "
+              onClick={toggleView}
+              style={{background:"lightgrey",margin:"0.5rem" }}
+            >
+              {isGrid ? <FontAwesomeIcon icon={faList}/>: <FontAwesomeIcon icon={faTh}/>}
+            </button>
+          </div>
+          {isGrid ? (
+          <div className="table-container">
+            <table class="table ">
+              <thead>
+                <tr>
+                  <th scope="col">S.No</th>
+                  <th scope="col">Product Id</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Category</th>
+                  <th scope="col">Bestseller</th>
+                  <th scope="col">Image</th>
+                  <th className="hide-action" scope="col">
+                    Action
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="tdody-a ">
+                {filteredProducts.map((product, key) => (
+                  <tr key={key}>
+                    <td scope="row">{product.id}</td>
+                    <td>{product.id}</td>
+
+                    <td>{product.name}</td>
+                    <td>₹ {product.new_price}</td>
+                    <td>
+                      {product.category
+                        .split(" ")
+                        .map(capitalizeFirstLetter)
+                        .join(" ")}
+                    </td>
+                    <td>
+                      {product.bestseller && (
+                        <span
+                          className="badge bg-warning"
+                          style={{ margin: "none" }}
+                        >
+                          Bestseller
+                        </span>
+                      )}
+                    </td>
+                    <td>
+                      <img
+                        src={product.image}
+                        alt="Product Image"
+                        style={{
+                          maxWidth: "45px",
+                          maxHeight: "35px",
+                          margin: "-0.5rem",
+                         
+                        }}
+                      />
+                    </td>
+                    <td
+                      className="hide-action"
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <div
+                        className="hide-action"
+                        style={{
+                          width: "22px",
+                          height: "25px",
+                          borderRadius: "2px",
+                          color: "white",
+                          background: "rgb(0 165 247)",
+                          cursor: "pointer",
+                          marginRight: "10px",
+                        }}
+                      >
+                        {" "}
+                        <MdEdit />
+                      </div>
+                      <div
+                        className="hide-action"
+                        style={{
+                          width: "22px",
+                          height: "25px",
+                          borderRadius: "2px",
+                          color: "white",
+                          background: "#e34848",
+                          cursor: "pointer",
+                          marginRight: "10px",
+                        }}
+                      >
+                        {" "}
+                        <MdDelete />
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            </div>
+          ) : (
+            <div className="container">
+              
+              <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 list_p">
+                {filteredProducts.map((product) => (
+                  <div key={product.id} className="col mb-4">
+                    <div className="card">
+                      <img
+                        src={product.image}
+                        className="card-img-top"
+                        alt={product.name}
+                      ></img>
+                      <div className="card-body">
+                        <div className="card1">
+                          <h5 className="card-title">{product.name}</h5>
+                          <p className="card-text">
+                            Price: ₹{product.new_price}{" "}
+                            <s style={{ color: "#7d8a9b" }}>
+                              {" "}
+                              ₹{product.old_price}
+                            </s>
+                          </p>
+                        </div>
+                        <div className="card2">
+                          {product.bestseller && (
+                            <span className="badge bg-warning">Bestseller</span>
+                          )}
+                          <br />
+                          <button
+                            type="button"
+                            className="btn btn-success"
+                            style={{ margin: "1rem" }}
+                          >
+                            Rating <FontAwesomeIcon icon={faStar} />
+                          </button>
+                          <button type="button" className="btn btn-dark">
+                            Left-{generateRandomLeftover()}{" "}
+                            <FontAwesomeIcon icon={faCubes} />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -182,52 +246,3 @@ const Products = () => {
 };
 
 export default Products;
-
-// <div className="container">
-//           <div className="productnav">
-//             <h4>{selectedCategory}</h4>
-//             <h6>{filteredProducts.length} Products</h6>
-//           </div>
-//           <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 list_p">
-//             {filteredProducts.map((product) => (
-//               <div key={product.id} className="col mb-4">
-//                 <div className="card">
-//                   <img
-//                     src={product.image}
-//                     className="card-img-top"
-//                     alt={product.name}
-//                   ></img>
-//                   <div className="card-body">
-//                     <div className="card1">
-//                       <h5 className="card-title">{product.name}</h5>
-//                       <p className="card-text">
-//                         Price: ₹{product.new_price}{" "}
-//                         <s style={{ color: "#7d8a9b" }}>
-//                           {" "}
-//                           ₹{product.old_price}
-//                         </s>
-//                       </p>
-
-//                     </div>
-//                     <div className="card2">
-//                        {product.bestseller && (
-//                         <span className="badge bg-warning">Bestseller</span>
-//                       )}
-//                       <br />
-//                       <button
-//                         type="button"
-//                         className="btn btn-success"
-//                         style={{ margin: "1rem" }}
-//                       >
-//                         Rating <FontAwesomeIcon icon={faStar} />
-//                       </button>
-//                       <button type="button" className="btn btn-dark">
-//                         Left-{generateRandomLeftover()} <FontAwesomeIcon icon={faCubes} />
-//                       </button>
-//                     </div>
-//                   </div>
-//                 </div>
-//               </div>
-//             ))}
-//           </div>
-//         </div>

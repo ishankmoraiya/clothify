@@ -8,12 +8,11 @@ import Title from "../../shared/Title";
 // import SidePanel from "./SidePanel";
 // import OrderList from "./OrderList";
 import "./Order.css";
-import SidePanel from "./SidePanel";
 import all_order from "./OrderList";
 import { Link } from "react-router-dom";
 import { IoEye } from "react-icons/io5";
 import { LuHeading1 } from "react-icons/lu";
-import { IoIosCheckboxOutline } from "react-icons/io";
+import { IoIosEye } from "react-icons/io";
 
 import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
@@ -32,10 +31,11 @@ const Orders = () => {
             gap: "0.3rem",
           }}
         >
-          <h3>All Orders</h3> - <span>{all_order.length} Orders Found</span>
+          <h5>All Orders</h5>
         </span>
-
-        <table class="table">
+      </div>
+      <div className="table-responsive ">
+        <table className="table">
           <thead>
             <tr>
               <th scope="col">S.No</th>
@@ -47,88 +47,109 @@ const Orders = () => {
               <th scope="col">Order Date</th>
               <th scope="col">Deliver Date</th>
               <th scope="col">Action</th>
+              <th scope="col">View Order</th>
             </tr>
           </thead>
-          <tbody className="tdody_a">
+          <tbody>
             {all_order.map((list, key) => (
-              <Link to={`/vieworder/${list.p_id}`}>
-                <tr key={key} style={{   borderColor:"#bfafaf87" , borderBottomWidth:"1px"}}>
-                  <td scope="row">{list.s_no}</td>
-                  <td>{list.c_id}</td>
-                  <td>{list.o_id}</td>
-                  <td>{list.username}</td>
-                  <td>
-                    {list.status === "Delivered" ? (
-                      <button
-                        type="button"
-                        class="btn btn-success"
-                        style={{
-                          background:
-                            " linear-gradient(rgb(26 147 31), rgb(150 248 154))",
-                          borderRadius: "2rem",
-                        }}
-                      >
-                        {list.status}
-                      </button>
-                    ) : (
-                      <button
-                        type="button"
-                        class="btn btn-warning"
-                        style={{
-                          background:
-                            " linear-gradient(rgb(255 198 34), rgb(249, 255, 255))",
-                          borderRadius: "1rem",
-                          
-                        }}
-                      >
-                        {" "}
-                        {list.status}{" "}
-                      </button>
-                    )}
-                  </td>
-                  <td>&#8377;{list.amount}</td>
-
-                  <td>{list.date}</td>
-                  <td>{list.delivery_date}</td>
-                  <td
+              <tr
+                key={key}
+                style={{
+                  borderColor: "#bfafaf87",
+                  borderBottomWidth: "1px",
+                }}
+              >
+                <th> {list.s_no}</th>
+                <td>{list.c_id}</td>
+                <td>{list.o_id}</td>
+                <td>{list.username}</td>
+                <td>
+                  {list.status === "Delivered" ? (
+                    <button
+                      type="button"
+                      class="btn btn-success"
+                      style={{
+                        background:
+                          " linear-gradient(rgb(26 147 31), rgb(150 248 154))",
+                        borderRadius: "2rem",
+                      }}
+                    >
+                      {list.status}
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      class="btn btn-warning"
+                      style={{
+                        background:
+                          " linear-gradient(rgb(255 198 34), rgb(249, 255, 255))",
+                        borderRadius: "1rem",
+                      }}
+                    >
+                      {" "}
+                      {list.status}{" "}
+                    </button>
+                  )}
+                </td>
+                <td>&#8377;{list.amount}</td>
+                <td>{list.date}</td>
+                <td>{list.delivery_date}</td>
+                <td
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "center",
+                    border: "none",
+                  }}
+                >
+                  <div
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "center",
+                      width: "20px",
+                      height: "25px",
+                      borderRadius: "2px",
+                      color: "white",
+                      background: "#5f5fe8",
+                      cursor: "pointer",
+                      marginRight: "10px",
                     }}
                   >
-                    <div
-                      style={{
-                        width: "20px",
-                        height: "25px",
-                        borderRadius: "2px",
-                        color: "white",
-                        background: "#5f5fe8",
-                        cursor: "pointer",
-                        marginRight: "10px",
-                      }}
-                    >
-                      {" "}
-                      <MdEdit />
-                    </div>
-                    <div
-                      style={{
-                        width: "20px",
-                        height: "25px",
-                        borderRadius: "2px",
-                        color: "white",
-                        background: "#e34848",
-                        cursor: "pointer",
-                        marginRight: "10px",
-                      }}
-                    >
-                      {" "}
-                      <MdDelete />
-                    </div>
-
-                                     </td>
-                </tr>
-              </Link>
+                    {" "}
+                    <MdEdit />
+                  </div>
+                  <div
+                    style={{
+                      width: "20px",
+                      height: "25px",
+                      borderRadius: "2px",
+                      color: "white",
+                      background: "#e34848",
+                      cursor: "pointer",
+                      marginRight: "10px",
+                    }}
+                  >
+                    {" "}
+                    <MdDelete />
+                  </div>
+                </td>
+                <td  
+                  >
+                  <div
+                    style={{
+                      background: "#efec5c",
+                      width: "20px",
+                      height: "25px",
+                      borderRadius: "2px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Link to={`/vieworder/${list.p_id}`}>
+                      <IoIosEye style={{ color: "white" }} />
+                    </Link>
+                  </div>
+                </td>
+              </tr>
             ))}
           </tbody>
         </table>

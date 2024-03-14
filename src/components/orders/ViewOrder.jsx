@@ -1,5 +1,5 @@
 import React from "react";
-import SidePanel from "./SidePanel";
+
 import { useParams, Link } from "react-router-dom";
 import all_product from "../../assets/all_product";
 

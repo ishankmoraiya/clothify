@@ -1,4 +1,4 @@
-/* Order.css */
+
 
 
 
@@ -8,53 +8,54 @@
   flex-direction: column !important;
   gap: 0.5rem !important;
   padding: 0.5rem !important;
-  padding-top: 2.6rem !important;
-  overflow-x: auto !important;
+  padding-top: 1rem !important;
 }
 
-.table {
+/* .table {
   width: 100% !important;
   table-layout: fixed !important;
   min-width: 100% !important;
   overflow-x: auto !important;
   border-collapse: collapse !important;
-}
+
+} */
 
 .tdody_a {
   max-height: 72.5vh !important;
   overflow-y: auto !important;
   display: block !important;
-  
+
 }
+
 
 ::-webkit-scrollbar {
   width: 0 !important;
 }
 
-.table > thead,
-tbody tr {
+/* .custom-table > thead,
+.custom-table tbody tr {
   display: table !important;
-  width: 100% !important;
-  table-layout: fixed !important;
-}
+  table-layout: fixed;
+  width: 100%;
+} */
 
-.table th,
+
+
+
+
+ .table th,
 .table td {
   padding: 12px !important;
   text-align: center !important;
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
-}
+}   
 
-.table > .tbody_a tr:nth-child(even) {
-  background-color: #f2f2f2 !important; /* Background color for even rows */
-}
 
-.table > .tbody_a tr:nth-child(odd) {
-  background-color: #ffffff !important; /* Background color for odd rows */
-}
 
+
+/*good*/
 .table th {
   background-color: #f8f9fa !important;
   color: #212529 !important;
@@ -69,10 +70,10 @@ tbody tr {
 /* Responsive styles */
 
 @media screen and (max-width: 768px) {
-  .table {
+  /* .table {
     width: 100% !important;
     overflow-x: auto !important;
-  }
+  } */
   .order_row1{
     margin: 0rem;
     padding: 0.1rem;

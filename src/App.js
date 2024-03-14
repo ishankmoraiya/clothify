@@ -7,9 +7,7 @@ import Orders from "./components/orders/Orders";
 import OrderCalenderview from "./components/delivery/OrderCalenderview";
 import Product_layout from "./components/product/Product_layout";
 import AddProduct from "./components/product/AddProduct";
-import Refund from "./components/orders/Refund";
-import Shipment from "./components/orders/Shipment";
-import DeliveryPartner from "./components/orders/DeliveryPartner";
+
 import OrderList from "./components/orders/OrderList"
 import { ViewOrder } from "./components/orders/ViewOrder";
 
@@ -26,9 +24,6 @@ function App() {
       <Route path="/OrderCalenderview" element={<OrderCalenderview/>}/>
 
       <Route path="/orderlist" element={<OrderList />}/>
-      <Route path="/shipment" element={<Shipment/>}/>
-      <Route path="/deliverypartner" element={<DeliveryPartner/>}/>
-      <Route path="/refund" element={<Refund/>}/>
       <Route path="/vieworder/:p_id" element={<ViewOrder/>}/>
     </Routes>
     </BrowserRouter>
