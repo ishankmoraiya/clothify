@@ -1,3 +1,7 @@
+## Description
+
+This project is a frontend application developed using React.js for managing orders and products. It includes components for order management, product management, and data visualization. The project also includes optional components for calendar-based order scheduling.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -12,7 +16,7 @@ You may also see any lint errors in the console.
 
 ### start with Project Layout
 
-   --frontend > { Front end project }
+--frontend > { Front end project }
           - node_modules >
           - public >
                  -index.html // landing page
@@ -27,16 +31,9 @@ You may also see any lint errors in the console.
                               - ChartComponent.jsx // for bar chart
                               - DashBoard.jsx // front page
                               - DashBoard.css //styling
-                     
                      - orders >   { ORDER MANAGEMENT }
-                              - Sidepanel.jsx
                               - Order.jsx
                               - ViewOrder.jsx
-                              - Shipment.jsx // not implemented
-                              - Refund.jsx // not implemented
-                              - Delivery partner //not implemented
-
-                              - OrderList.js //It contanins all orders (mock data)
                               - Order.css //for all components
                      - products > { PRODUCT MANAGEMENT }
                               - Product_layout.jsx
@@ -49,8 +46,6 @@ You may also see any lint errors in the console.
                               - OrderCalenderview.jsx 
                               - Calender.jsx
                               - OrderDetails.jsx
-                     
-
              - images > //for product layout
                     - addproduct.png
                     - allproduts.png
@@ -60,3 +55,14 @@ You may also see any lint errors in the console.
              - index.js 
    
    
+
+
+## Installation
+
+1. Clone the repository:git clone <repository-url>
+
+2. Install dependencies:npm install
+
+## Usage
+
+Once the development server is running, you can access the application at [http://localhost:3000](http://localhost:3000) in your web browser.

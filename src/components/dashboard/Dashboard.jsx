@@ -48,7 +48,7 @@ const Dashboard = () => {
   }, [all_order]);
 
   const dataoforders = [all_order.length, deliveredOrders, pendingOrders,returnorder];
-  const sales=["₹ 45,000","₹ 30,000","₹ 44,400" ,"₹ 24,400","₹ 84,400","₹ 4,500"] ;
+  const sales=["₹ 45,000","₹ 30,000","₹ 44,400" ,"₹ 24,400","₹ 64,400","₹ 4,500"] ;
   const parsedSales = sales.map(sale => parseFloat(sale.replace("₹", "").replace(",", "")));
 
   useEffect(() => {
@@ -186,11 +186,11 @@ const Dashboard = () => {
             <ChartComponent
               data={parsedSales}
               labels={[
-                "October",
-                "November",
-                "December",
-                "January",
-                "Febuary",
+                "Oct",
+                "Nov",
+                "Dec",
+                "Jan",
+                "Feb",
                 "March",
               ]}
             />

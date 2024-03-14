@@ -44,8 +44,8 @@
     background-color: #fff;
   }
   .addbtn {
-    width: 200px; /* Increase width to accommodate text */
-    height: 50px; /* Decrease height for vertical orientation */
+    width: 190px; 
+    height: 50px; 
     position: relative;
     background-color: transparent;
     cursor: pointer;
@@ -54,10 +54,10 @@
     border-radius: 30px;
     color: #333;
     transition: all 0.5s ease-in-out;
-    display: flex; /* Use flexbox to make it vertical */
-    justify-content: center; /* Center text vertically */
-    align-items: center; /* Center text horizontally */
-    flex-direction: column; /* Arrange text vertically */
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column; 
   }
   
   .addbtn-text {
@@ -80,12 +80,11 @@
     z-index: -1;
   }
   
-  .addbtn:hover {
+  /* .addbtn:hover {
     box-shadow: 1px 1px 200px #252525;
     color: #fff;
     border: none;
-  }
-  
+  }  */
   .type1:hover::after {
     visibility: visible;
     transform: scale(100) translateX(2px);
