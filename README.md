@@ -3,14 +3,15 @@
 My Awesome Front-End Application is a web-based tool for managing tasks and deadlines efficiently.
 
 ## Start
-You can deploy the frontend code to Vercel. Visit here: Clothify ERP on Vercel or run it locally.
+Website is deployed on vercel this is the url;
+[https://clothify-erp.vercel.app/]
 
-To run the app in the development mode, execute:
+this is git repository
+[https://github.com/ishankmoraiya/clothify]
 
-To run the app in the development mode, execute:
-
+To run the in the development mode, execute:
 npm start
-Open http://localhost:3000 to view it in your browser.
+Open [http://localhost:3000] to view it in your browser.
 
 ## Description
 This project is a frontend application developed using React.js for managing orders and products. It includes components for order management, product management, and data visualization. The project also includes optional components for calendar-based order scheduling.
@@ -41,8 +42,14 @@ npm start
 Runs the app in the development mode.
 Open http://localhost:3000 to view it in your browser.
 
-The page will reload when you make changes.
-You may also see any lint errors in the console.
+## Navigate
+To start, utilize the dashboard for analysis. Click on the dashboard or navbar to access orders, products, and calendars. Then, explore all products from different viewpoints and access the order list. In the order list, view order invoices. Lastly, in the calendar, observe all delivered and pending products.
+-Begin with the dashboard for analysis.
+-Click on the dashboard or navbar to access orders, products, and calendars.
+-Explore all products from different viewpoints.
+-Access the order list.
+-In the order list, view order invoices.
+-Lastly, in the calendar, observe all delivered and pending products.
 
 ## Project Layout
 
@@ -81,8 +88,14 @@ frontend/
       - allproduts.png
     - shared/
       - Title.jsx // reflects on title on every new rendering
+    - screenshot  //both responisve or desktop screenshot available
+      - dashboard
+      - products
+      - orders
+      - calender  
     - App.js 
     - index.js 
+      
 
 
 ## Installation
@@ -119,18 +132,15 @@ In the calendar, you can view pending or delivered orders and navigate through a
 
 ## Screenshots
 
-![Dashboard](screenshots/dashboard.png)
-*Dashboard displaying tasks and deadlines.*
+*all responsive screenshots are in saperate folder*
 
-![Project Mangement](screenshots/dashboard.png)
-*Dashboard displaying tasks and deadlines.*
+![Dashboard](src/screenshots/Dashboard/)
 
-![Order Mangement](screenshots/dashboard.png)
-*Dashboard displaying tasks and deadlines.*
+![Product Mangement](src/screenshots/Products%20management/)
 
-![Calender view](screenshots/dashboard.png)
-*Dashboard displaying tasks and deadlines.*
+![Order Mangement](src/screenshots/Order%20mangement/)
 
+![Calender view](src/screenshots/Calender%20view/)
 
 ## Development
 
