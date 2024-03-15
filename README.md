@@ -1,7 +1,6 @@
 ## Introduction
 
 My Awesome Front-End Application is a web-based tool for managing tasks and deadlines efficiently.
-Simplified ERP System with React I am taking an example of clothe ecommerce as Simplified ERP System
 
 ## Simplified ERP System for Clothing Ecommerce
 
