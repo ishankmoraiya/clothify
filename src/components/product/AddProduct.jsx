@@ -71,7 +71,8 @@ const AddProduct = () => {
             "linear-gradient(rgb(207 225 222 / 26%), rgb(249, 255, 255))",
         }}
       >
-        <h4>Add New Product</h4>
+        <h4 style={{ textAlign: "center",
+  marginBottom: "20px"}}>Add New Product</h4>
         {error && <div className="error">{error}</div>}
         <form onSubmit={handleSubmit}>
           <div className="contain1">

@@ -61,7 +61,7 @@ const Products = () => {
   const toggleView = () => {
     setIsGrid(!isGrid);
   };
-
+  let index=0;
   return (
     <div>
       <Title title=" - Products" />
@@ -133,7 +133,7 @@ const Products = () => {
                         border: "1px solid #bfafaf87",
                       }}
                     >
-                      <td scope="row">{product.id}</td>
+                      <td scope="row">{++index}</td>
                       <td>{product.id}</td>
 
                       <td>{product.name}</td>
