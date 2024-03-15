@@ -1,7 +1,9 @@
 import React from 'react';
 import "./Calender.css"
 const Calendar = ({ onDateClick }) => {
-  // Generate an array of days for the current month
+  //Generate randowm dates for the calender view 
+
+  //if needed then realtime calendrr is also implemented for nor data are less thats why i choose a mock calener view 
   const daysInMonth = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0).getDate();
   const daysArray = [...Array(daysInMonth).keys()].map((day) => day + 1);
 

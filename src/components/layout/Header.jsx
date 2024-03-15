@@ -1,11 +1,12 @@
 import React from "react";
 import {Link} from "react-router-dom"
+
 const Header = () => {
   return (
-    <div>
+    <div style={{marginTop: 0, marginLeft: 0, marginRight: 0}} >
         
-      <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{paddingLeft:"1rem"}}>
-        <div className="container-fluid">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{paddingLeft:"1rem" }}>
+      <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             Clothify <span style={{fontSize:"0.7rem" ,color:"lightgrey"}}>ERP</span>
           </Link>

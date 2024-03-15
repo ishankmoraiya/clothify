@@ -1,7 +1,6 @@
 .container-dash {
   display: flex;
   flex-direction: column; 
- 
   margin: 0rem;
   padding: 0rem;
 }
@@ -10,18 +9,20 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  background-color: rgb(238, 243, 243);
-  padding: 1.4rem;
+  background-color :rgba(var(--bs-light-rgb));
+  /* background-color: rgb(238, 243, 243); */
+  padding-top: 1.4rem;
   padding-left: 1.5rem;
-  padding-right: 1.5rem; /* Adjust padding for small screens */
   height: 91.7vh;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+
 
 }
 
 .col1-dash a {
   padding-left: 0.4rem;
   text-decoration: none;
-  color: black; /* Set link text color to black */
+  color: rgb(19, 18, 18);
 }
 
 .icon-text-gap {
@@ -39,7 +40,7 @@
 }
 
 .card1-dash {
-  width: 18rem;
+  width: 16rem;
   padding: 2rem;
   
   border-radius: 0.2rem;
@@ -54,10 +55,10 @@
 }
 
 .profile-image {
-  width: 30px; /* Adjust as needed */
-  height: 30px; /* Adjust as needed */
-  border-radius: 50%; /* Makes the image round, adjust as needed */
-  margin-right: 10px; /* Add space between image and text */
+  width: 30px; 
+  height: 30px; 
+  border-radius: 50%; 
+  margin-right: 10px; 
 }
 
 .profile {
@@ -82,18 +83,17 @@
 
 
 .col1-dash h5 {
-  display: flex; /* To align image and text horizontally */
-  align-items: center; /* To vertically center items */
+  display: flex; 
+  align-items: center; 
 }
 
 .top {
-  /* padding-top: 2rem;
-  
-  display: flex;
-  flex-direction: row;
-  justify-content: center; */
   gap: 4rem;
 }
+.chart{
+  margin-top: 3.2rem;
+}
+
 
 /* Media Queries */
 @media screen and (min-width: 576px) {
@@ -111,15 +111,15 @@
    display: grid;
    justify-content: center;
  }
-  
+ .card1-dash {
+  width: 14rem;
+  height: 14rem;
+ }
 }
 
 @media screen and (min-width: 768px) {
   .col1-dash {
-    padding-right: 6rem;
+    padding-right: 4rem;
   }
 }
 
-.chart{
-  margin-top: 3.2rem;
-}

@@ -67,7 +67,7 @@ const Products = () => {
       <Title title=" - Products" />
       <div className="body1">
         <div className="container1">
-          <h4>{selectedCategory}_Products</h4>
+          <h4>{selectedCategory} Products</h4>
 
           <input
             className="search"
@@ -91,7 +91,7 @@ const Products = () => {
             <h5>{selectedCategory} Products</h5>
             
           </div>
-          <div style={{ display: "flex", flexDirection: "row" }}>
+          <div style={{ display: "flex", flexDirection: "row" ,position:"relative" }}>
               <button
                 type="button"
                 className="btn "
@@ -106,6 +106,7 @@ const Products = () => {
               </button>
             </div>
           {isGrid ? (
+            <div >
             <div className="table-container">
               <table class="table ">
                 <thead className="sticky-header">
@@ -206,6 +207,7 @@ const Products = () => {
                   ))}
                 </tbody>
               </table>
+            </div>
             </div>
           ) : (
             <div className="container">

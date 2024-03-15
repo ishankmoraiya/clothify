@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import all_order from "../../components/orders/OrderList"; // Imported JSON data file here
+
 import { LuTruck } from "react-icons/lu";
 import { FaRegClock } from "react-icons/fa6";
-import { IoMdArrowBack } from "react-icons/io";
-import { useParams, Link } from "react-router-dom";
+
+import all_order from "../../components/orders/OrderList"; // Imported JSON data file here for all orders 
 import all_product from "../../assets/all_product";
 import "./Calender.css";
+
 const OrderDetails = ({ date }) => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);

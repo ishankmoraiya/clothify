@@ -91,8 +91,8 @@ const Dashboard = () => {
         <div className="col1-dash">
           <h5>
             <img src={im} alt="Profile" className="profile-image" />
-            <div className="profile">
-              <div>HR@entnt</div>
+            <div className="profile" style={{color:""}}>
+              <span >HR@entnt</span>
               <span style={{ fontSize: "1rem", color: "#68696d" }}>Manager</span>
             </div>
           </h5>
@@ -100,17 +100,17 @@ const Dashboard = () => {
             <FaHome />
             <span className="icon-text-gap">Dashboard</span>
           </Link>
+          <Link to="/products">
+           <FaShoppingCart />
+            <span className="icon-text-gap">Manage Products</span>
+          </Link>
           <Link to="/orders">
             <CiCircleList />
-            <span className="icon-text-gap">OrderList</span>
-          </Link>
-          <Link to="/products">
-            <FaShoppingCart />
-            <span className="icon-text-gap">All Products</span>
+            <span className="icon-text-gap">Manage Order</span>
           </Link>
           <Link to="/OrderCalenderview">
             <FaBalanceScaleLeft />
-            <span className="icon-text-gap">Calender</span>
+            <span className="icon-text-gap">Calender View</span>
           </Link>
           <Link>
             <FaDatabase />

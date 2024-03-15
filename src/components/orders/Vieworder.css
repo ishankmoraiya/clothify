@@ -1,19 +1,4 @@
-/* .card{
-   border-radius: 0rem;
-   border: 0rem;
-   width: 90vh;
 
-}
-.card-body{
-
-}
-.card-img-top {
-    width: 60%;
-    margin: 1rem auto;
-  }
-.card:hover {
-    transform: translateY(0px);
-  } */
 .back{
     padding: 1rem;
     
@@ -39,14 +24,7 @@
    flex-direction: column;
    gap: 0.1rem;
   }
-   /* .col2{
-   display: flex;
-   flex-direction: row;
-   gap: 0.1rem;
-  } 
-  .col3{
-    display: flex;
-    flex-direction: row; */
+  
   .order_row{
     padding-top: 1rem;
   }
