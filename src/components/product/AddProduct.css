@@ -104,4 +104,7 @@ select {
    .contain1{
     display: grid;
    }
+  label{
+    width:60%
+  }
 }
