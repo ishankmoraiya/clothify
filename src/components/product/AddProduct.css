@@ -18,8 +18,8 @@ h4 {
 
 .div1,
 .div2 {
-  flex: 1; /* Equal width for both divs */
-  padding: 0 1rem; /* Add padding to the sides */
+  flex: 1; 
+  padding: 0 1rem; 
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -27,11 +27,11 @@ h4 {
 
 .form-group {
   display: flex;
-  flex-direction: column; /* Change to column layout */
+  flex-direction: column; 
 }
 
 .form-group2 {
-  /* No need to adjust, already a flex column */
+  
 }
 
 label {
