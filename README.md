@@ -4,7 +4,7 @@ My Awesome Front-End Application is a web-based tool for managing tasks and dead
 
 ## Simplified ERP System for Clothing Ecommerce
 
-An innovative web-based application designed to streamline task management and deadline tracking within the realm of clothing ecommerce. Built with React, it serves as a simplified Enterprise Resource Planning (ERP) system tailored to the unique needs of the fashion industry.
+An innovative web-based application designed to streamline task management and deadline tracking within the realm of clothing ecommerce. Built with React, it serves as a simplified Enterprise Resource Planning (ERP) system tailored to the unique needs of the fashion industry.  
 
 Key Features:
 
@@ -27,7 +27,16 @@ Website is deployed on vercel this is the url;
 this is git repository
 [https://github.com/ishankmoraiya/clothify]
 
-To run the in the development mode, execute:
+To run the in the development mode,clone all code execute:
+steps 
+npm i 
+npm i react-router-dom
+npm i chartjs-2
+npm i react-dom
+npm i react-icons
+npm i react-helmet-async
+npm i react-script
+npm i react-scrool
 npm start
 Open [http://localhost:3000] to view it in your browser.
 
@@ -125,6 +134,14 @@ frontend/
 2.Install dependencies:
 
   -npm install
+  -npm i react-router-dom
+  -npm i chartjs-2
+  -npm i react-dom
+  -npm i react-icons
+  -npm i react-helmet-async
+  -npm i react-script
+  -npm i react-scrool
+  -npm start  // application started on localhost/3000
 
 
 ## Usage
