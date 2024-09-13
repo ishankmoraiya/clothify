@@ -114,7 +114,7 @@ const Dashboard = () => {
           </Link>
           <Link>
             <FaDatabase />
-            <span className="icon-text-gap">Tables</span>
+            <span className="icon-text-gap">Table</span>
           </Link>
         </div>
         <div className="col2-dash">
