@@ -9,9 +9,9 @@ import Product_layout from "./components/product/Product_layout";
 import AddProduct from "./components/product/AddProduct";
 import OrderList from "./components/orders/OrderList"
 import { ViewOrder } from "./components/orders/ViewOrder";
-import Login from "./components/Signupandlogin/login";
-import Signin from "./components/Signupandlogin/signin";
-import Text from "./components/Signupandlogin/Text";
+// import Login from "./components/Signupandlogin/login";
+// import Signin from "./components/Signupandlogin/signin";
+// import Text from "./components/Signupandlogin/Text";
 function App() {
   return (
     <BrowserRouter>
@@ -26,9 +26,9 @@ function App() {
 
       <Route path="/orderlist" element={<OrderList />}/>
       <Route path="/vieworder/:p_id" element={<ViewOrder/>}/>
-
+{/* 
       <Route path="/login" element={<Login/>}/>
-      <Route path="/signin" element={<Signin/>}/>
+      <Route path="/signin" element={<Signin/>}/> */}
 
     </Routes>
     </BrowserRouter>
